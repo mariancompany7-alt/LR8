@@ -1,4 +1,3 @@
-#include <windows.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -19,9 +18,9 @@ void fillUkrainianAlphabet(vector<string>& ukrAlphabet) {
 
 void replaceLetter(vector<string>& ukrAlphabet) {
 	for (int i = 0; i < SIZE; i++) {
-		if (ukrAlphabet[i] == "à" || ukrAlphabet[i] == "î" || ukrAlphabet[i] == "ó"
-			|| ukrAlphabet[i] == "å" || ukrAlphabet[i] == "è" || ukrAlphabet[i] == "³") {
-			ukrAlphabet[i] = "ô";
+		if (ukrAlphabet[i] == "Ð°" || ukrAlphabet[i] == "Ð¾" || ukrAlphabet[i] == "Ñƒ"
+			|| ukrAlphabet[i] == "Ðµ" || ukrAlphabet[i] == "Ð¸" || ukrAlphabet[i] == "Ñ–") {
+			ukrAlphabet[i] = "Ñ„";
 		}
 		cout << ukrAlphabet[i] << " ";
 	}
@@ -29,8 +28,6 @@ void replaceLetter(vector<string>& ukrAlphabet) {
 }
 
 int main() {
-	SetConsoleCP(65001);
-	SetConsoleOutputCP(65001);
 	setlocale(LC_ALL, "ukr");
 	vector<string> ukrAlphabet;
 	fillUkrainianAlphabet(ukrAlphabet);
